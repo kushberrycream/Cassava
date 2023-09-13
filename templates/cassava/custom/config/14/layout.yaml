@@ -1,0 +1,86 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1693302101
+layout:
+  /header/:
+    -
+      - 'position-header 50'
+      - 'logo-1233 50'
+  /navigation/:
+    -
+      - menu-6698
+  /main/:
+    -
+      - position-breadcrumbs
+    -
+      - system-messages-1072
+    -
+      - position-position-6586
+    -
+      - 'position-position-2267 70'
+      - 'position-position-4950 30'
+    -
+      - system-content-9865
+  /footer/:
+    -
+      - position-position-1184
+  offcanvas:
+    -
+      - mobile-menu-3129
+structure:
+  header:
+    attributes:
+      boxed: ''
+      class: text-center
+      variations: ''
+  navigation:
+    type: section
+    attributes:
+      boxed: ''
+  main:
+    attributes:
+      boxed: ''
+  footer:
+    attributes:
+      boxed: ''
+      class: sticky-footer
+      variations: ''
+  offcanvas:
+    attributes:
+      position: g-offcanvas-right
+      class: ''
+      extra: {  }
+      swipe: '1'
+      css3animation: '1'
+content:
+  position-header:
+    attributes:
+      key: header
+  logo-1233:
+    block:
+      variations: align-right
+      extra:
+        - {  }
+  position-breadcrumbs:
+    attributes:
+      key: breadcrumbs
+  position-position-6586:
+    title: Accordion
+    attributes:
+      key: accordion
+  position-position-2267:
+    title: Slideshow
+    attributes:
+      key: slideshow
+  position-position-4950:
+    title: Contacts
+    attributes:
+      key: contacts
+    block:
+      id: contacts-frontpage
+  position-position-1184:
+    title: Footer
+    attributes:
+      key: Footer

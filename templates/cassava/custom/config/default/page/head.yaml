@@ -1,0 +1,15 @@
+meta:
+  -
+    description: 'NRI''s collaborative work on cassava, an important food security crop, has won multiple awards. Their world-leading research addresses key challenges in the cassava value chain.'
+  -
+    'og:description': 'NRI''s collaborative work on cassava, an important food security crop, has won multiple awards. Their world-leading research addresses key challenges in the cassava value chain.'
+  -
+    'og:title': 'NRI Cassava Programme'
+  -
+    'og:type': website
+  -
+    'og:image': ../images/logos/NRI-Logo_sm.png
+  -
+    'og:url': 'https://cassava.nri.org'
+head_bottom: ''
+atoms: {  }

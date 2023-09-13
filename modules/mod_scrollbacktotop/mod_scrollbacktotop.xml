@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension  type="module" version="3.1" client="site" method="upgrade">
+	<name>mod_scrollbacktotop</name>
+	<author>CodePlazza</author>
+	<creationDate>Oct 2022</creationDate>
+	<copyright>Copyright (C) 2018 - Today CodePlazza. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 and above</license>
+	<authorEmail>support@codeplazza.com</authorEmail>
+	<authorUrl>https://www.codeplazza.com/</authorUrl>
+	<version>1.0.2</version>
+	<description>
+<![CDATA[
+<div style="padding:1%;background:#fff;color:#444;font-size:14px;text-align:center;border: 2px solid #444;">
+<p style="background: #FFF;">
+<img src="../modules/mod_scrollbacktotop/assets/images/logo-top.png">
+<h1 style="
+font-size:26px;
+color: #fff;
+background: #3084B8;
+padding: 1%;
+margin-bottom: 0;">Scroll Back To Top - Free Version 1.0.2</h1>
+<p 
+style="
+margin-top:5px;
+font-size:16px;
+color: #fff;
+background: #3084B8;
+padding: 2%;">
+<span style="display:block; text-align:left">
+* Please Note: 
+<br/>You are currently using the free version. 
+<br/>Some features are not active in this version.
+<br/>You can upgrade to Premium version to use all features and Premium Developer Support.
+<br/><b>Thanks for choosing CodePlazza for your websites.</b>
+</span>
+<br />
+<a 
+style="font-size:16px;"
+class="btn btn-success" 
+target="_blank" 
+href="https://www.codeplazza.com/joomla-extensions/joomla-scroll-back-to-top-button.html?buypremium=yes">
+Upgrade to Premium
+</a>
+</p>
+</div>
+<script>
+jQuery('document').ready(function(){
+jQuery("[disabled]").after("<span style='color:red;padding: 0 5px;'>Upgrade to Premium for this feature</span>");
+});
+</script>
+]]>		
+	</description>
+	<files>
+		<filename module="mod_scrollbacktotop">mod_scrollbacktotop.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+		<folder>assets</folder>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_scrollbacktotop.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_scrollbacktotop.sys.ini</language>
+	</languages>
+	<updateservers>
+		<server type="extension" priority="1" name="Scroll Back To Top Update">https://www.codeplazza.com//extension_updates/mod_scrollbacktotop_update.xml</server>
+	</updateservers>
+	<config>
+		<fields name="params">	
+			<!-- Basic fieldset -->
+			<fieldset name="basic_set" label="MOD_SCROLLBACKTOTOP_FIELDSET_LABEL_BASIC">
+				<field name="loadj" default="0" type="list" multiple="false" label="MOD_SCROLLBACKTOTOP_FIELD_LABEL_LOADJ" description="MOD_SCROLLBACKTOTOP_FIELD_DESC_LOADJ">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+			<!-- General fieldset -->
+			<fieldset name="general_set" label="MOD_SCROLLBACKTOTOP_FIELDSET_LABEL_GENERAL">
+					<field name="title" type="text" filter="safehtml" default="Scroll Back to Top" label="MOD_SCROLLBACKTOTOP_FIELD_LABEL_TITLE" description="MOD_SCROLLBACKTOTOP_FIELD_DESC_TITLE" />
+					<field name="ofset" type="number" default="20" label="MOD_SCROLLBACKTOTOP_FIELD_LABEL_OFSET" description="MOD_SCROLLBACKTOTOP_FIELD_DESC_OFSET" min="0" max="1000" step="1" />
+					<field name="duration" type="number" default="750" label="MOD_SCROLLBACKTOTOP_FIELD_LABEL_DURATION" description="MOD_SCROLLBACKTOTOP_FIELD_DESC_DURATION" min="0" max="10000" step="1" />
+			</fieldset>
+			<!-- Theme & Design fieldset -->
+			<fieldset name="theme_set" label="MOD_SCROLLBACKTOTOP_FIELDSET_LABEL_THEME">
+				<field name="use_theme" default="1" type="list" multiple="false" label="MOD_SCROLLBACKTOTOP_FIELD_LABEL_USE_THEME" description="MOD_SCROLLBACKTOTOP_FIELD_DESC_USE_THEME">
+					<option value="1">JYES</option>
+					<option value="0"  disabled="true">JNO</option>
+				</field>
+				<field showon="use_theme:1" name="button_theme" default="1" type="list" multiple="false" label="MOD_SCROLLBACKTOTOP_FIELD_LABEL_BUTTON_THEME" description="MOD_SCROLLBACKTOTOP_FIELD_DESC_BUTTON_THEME">
+					<option value="1">Theme 1</option>
+					<option value="2">Theme 2</option>
+					<option value="3">Theme 3</option>
+					<option value="4">Theme 4</option>
+					<option value="5" disabled="true">Theme 5</option>
+					<option value="6" disabled="true">Theme 6</option>
+					<option value="7" disabled="true">Theme 7</option>
+					<option value="8" disabled="true">Theme 8</option>
+					<option value="9" disabled="true">Theme 9</option>
+					<option value="10" disabled="true">Theme 10</option>
+					<option value="11" disabled="true">Theme 11</option>
+					<option value="12" disabled="true">Theme 12</option>
+				</field>
+					<field showon="use_theme:1" disabled="true" name="button_color" type="color" default="#B1B520" label="MOD_SCROLLBACKTOTOP_FIELD_LABEL_BUTTON_COLOR" description="MOD_SCROLLBACKTOTOP_FIELD_DESC_BUTTON_COLOR" />
+					<field showon="use_theme:1" disabled="true" name="button_color_hover" type="color" default="#7f8206" label="MOD_SCROLLBACKTOTOP_FIELD_LABEL_BUTTON_COLOR_HOVER" description="MOD_SCROLLBACKTOTOP_FIELD_DESC_BUTTON_COLOR_HOVER" />
+					<field showon="use_theme:1" disabled="true" name="button_border_color" type="color" default="#FFFFFF" label="MOD_SCROLLBACKTOTOP_FIELD_LABEL_BUTTON_BORDER_COLOR" description="MOD_SCROLLBACKTOTOP_FIELD_DESC_BUTTON_BORDER_COLOR" />
+					<field showon="use_theme:1" disabled="true" name="button_border_color_hover" type="color" default="#FFFFFF" label="MOD_SCROLLBACKTOTOP_FIELD_LABEL_BUTTON_BORDER_COLOR_HOVER" description="MOD_SCROLLBACKTOTOP_FIELD_DESC_BUTTON_BORDER_COLOR_HOVER" />
+					<field showon="use_theme:1" disabled="true" name="button_border_thickness" type="number" default="2" label="MOD_SCROLLBACKTOTOP_FIELD_LABEL_BUTTON_BORDER_THICKNESS" description="MOD_SCROLLBACKTOTOP_FIELD_DESC_BUTTON_BORDER_THICKNESS" min="0" max="10" step="1" />
+				<field name="button_shape" default="circle" type="list" multiple="false" label="MOD_SCROLLBACKTOTOP_FIELD_LABEL_BUTTON_SHAPE" description="MOD_SCROLLBACKTOTOP_FIELD_DESC_BUTTON_SHAPE">
+					<option value="circle">Circle</option>
+					<option value="rounded" disabled="true">Rounded</option>
+					<option value="square" disabled="true">Square</option>
+					<option value="custom" disabled="true">Custom</option>
+				</field>
+					<field showon="button_shape:custom" name="button_custom" type="text" filter="safehtml" default="24px 0 24px 0" label="MOD_SCROLLBACKTOTOP_FIELD_LABEL_BUTTON_CUSTOM" description="MOD_SCROLLBACKTOTOP_FIELD_DESC_BUTTON_CUSTOM" />
+				<field name="button_effect" default="zoominout" type="list" multiple="false" label="MOD_SCROLLBACKTOTOP_FIELD_LABEL_BUTTON_EFFECT" description="MOD_SCROLLBACKTOTOP_FIELD_DESC_BUTTON_EFFECT">
+					<option value="zoominout">Zoom In Out</option>
+					<option value="fadeinout" disabled="true">Fade In Out</option>
+				</field>
+				<field name="button_position" default="bottom-right" type="list" multiple="false" label="MOD_SCROLLBACKTOTOP_FIELD_LABEL_BUTTON_POSITION" description="MOD_SCROLLBACKTOTOP_FIELD_DESC_BUTTON_POSITION">
+					<option value="bottom-right">Bottom Right</option>
+					<option value="bottom-center">Bottom Center</option>
+					<option value="bottom-left">Bottom Left</option>
+					<option value="center-right" disabled="true">Center Right</option>
+					<option value="center-center" disabled="true">Center Center</option>
+					<option value="center-left" disabled="true">Center Left</option>
+					<option value="top-right" disabled="true">Top Right</option>
+					<option value="top-left" disabled="true">Top Left</option>
+					<option value="top-center" disabled="true">Top Center</option>
+				</field>
+				<field name="icon_theme" default="1" type="list" multiple="false" label="MOD_SCROLLBACKTOTOP_FIELD_LABEL_ICON_THEME" description="MOD_SCROLLBACKTOTOP_FIELD_DESC_ICON_THEME">
+					<option value="1">Icon 1</option>
+					<option value="2" disabled="true">Icon 2</option>
+					<option value="3" disabled="true">Icon 3</option>
+					<option value="4" disabled="true">Icon 4</option>
+					<option value="5" disabled="true">Icon 5</option>
+				</field>
+					<field disabled="true" showon="use_theme:1" name="icon_color" type="color" default="#FFFFFF" label="MOD_SCROLLBACKTOTOP_FIELD_LABEL_ICON_COLOR" description="MOD_SCROLLBACKTOTOP_FIELD_DESC_ICON_COLOR" />
+					<field disabled="true" showon="use_theme:1" name="icon_color_hover" type="color" default="#EFEFEF" label="MOD_SCROLLBACKTOTOP_FIELD_LABEL_ICON_COLOR_HOVER" description="MOD_SCROLLBACKTOTOP_FIELD_DESC_ICON_COLOR_HOVER" />
+				<field name="button_size" default="medium" type="list" multiple="false" label="MOD_SCROLLBACKTOTOP_FIELD_LABEL_BUTTON_SIZE" description="MOD_SCROLLBACKTOTOP_FIELD_DESC_BUTTON_SIZE">
+					<option value="small" disabled="true">Small</option>
+					<option value="medium">Medium</option>
+					<option value="large" disabled="true">Large</option>
+				</field>
+			</fieldset>
+			<!-- Extras fieldset -->
+			<fieldset name="extras_set" label="MOD_SCROLLBACKTOTOP_FIELDSET_LABEL_EXTRAS">
+					<field disabled="true" name="customcss" type="textarea" rows="5" cols="10" filter="raw" default="/* you can add css code if it is necessary */" label="MOD_SCROLLBACKTOTOP_FIELD_LABEL_CUSTOMCSS" description="MOD_SCROLLBACKTOTOP_FIELD_DESC_CUSTOMCSS" />
+					<field disabled="true" name="customjs" type="textarea" rows="5" cols="10" filter="raw" default="// You can add js code if it is necessary" label="MOD_SCROLLBACKTOTOP_FIELD_LABEL_CUSTOMJS" description="MOD_SCROLLBACKTOTOP_FIELD_DESC_CUSTOMJS" />
+			</fieldset>
+			<!-- Advanced fieldset--> 
+			<fieldset name="advanced">
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+				<field name="moduleclass_sfx" type="textarea" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" rows="3"/>
+				<field name="cache" type="list" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC" default="1" filter="integer">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="number" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" default="900" filter="integer"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
